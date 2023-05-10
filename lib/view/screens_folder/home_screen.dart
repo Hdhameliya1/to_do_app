@@ -38,7 +38,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 child: Padding(
                   padding: const EdgeInsets.only(top: 80, left: 30, right: 30),
                   child: Column(
-                    children: [
+                    children: const [
                       Text(
                         "Todo's Task",
                         textAlign: TextAlign.center,
@@ -69,10 +69,10 @@ class _HomeScreenState extends State<HomeScreen> {
               padding: const EdgeInsets.only(top: 200),
               child: ListView.separated(
                 itemBuilder: (context, index) => Container(
-                  margin: EdgeInsets.only(left: 20, right: 15),
-                  padding: EdgeInsets.only(left: 10, top: 10, bottom: 10),
+                  margin: const EdgeInsets.only(left: 20, right: 15),
+                  padding: const EdgeInsets.only(left: 10, top: 10, bottom: 10),
                   decoration: BoxDecoration(
-                    boxShadow: [
+                    boxShadow: const [
                       BoxShadow(
                         color: Colors.grey,
                         blurRadius: 6,
@@ -83,7 +83,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ),
                     ],
-                    gradient: LinearGradient(
+                    gradient: const LinearGradient(
                       begin: Alignment.topRight,
                       end: Alignment(0.2, 0.0),
                       colors: [
@@ -150,45 +150,6 @@ class _HomeScreenState extends State<HomeScreen> {
                               fontSize: 15,
                             ),
                           ),
-                          // Row(
-                          //   mainAxisAlignment: MainAxisAlignment.spaceAround,
-                          //   children: [
-                          //     IconButton(
-                          //       onPressed: () async {
-                          //         dynamic data = await Navigator.push(
-                          //           context,
-                          //           MaterialPageRoute(
-                          //             builder: (context) => TodoScreen(
-                          //               toDoList: toDoList,
-                          //               index: index,
-                          //             ),
-                          //           ),
-                          //         );
-                          //         if (data != null) {
-                          //           debugPrint("Data ---> $data");
-                          //           toDoList = data;
-                          //           setState(() {});
-                          //         }
-                          //       },
-                          //       icon: const Icon(
-                          //         Icons.edit,
-                          //         color: Color(0x47000000),
-                          //         size: 30,
-                          //       ),
-                          //     ),
-                          //     IconButton(
-                          //       onPressed: () {
-                          //         toDoList.removeAt(index);
-                          //         setState(() {});
-                          //       },
-                          //       icon: const Icon(
-                          //         Icons.auto_delete_outlined,
-                          //         color: Color(0x47000000),
-                          //         size: 30,
-                          //       ),
-                          //     ),
-                          //   ],
-                          // ),
                         ],
                       ),
                       SizedBox(
@@ -250,6 +211,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         toDoList: toDoList,
                       ),
                     ));
+                setState(() {});
               },
               child: Padding(
                 padding: const EdgeInsets.only(top: 700, left: 125),
@@ -257,16 +219,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   height: 50,
                   width: 200,
                   alignment: Alignment.center,
-                  child: Text(
-                    "Add Task",
-                    textAlign: TextAlign.center,
-                    style: const TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.w400,
-                      fontSize: 15,
-                    ),
-                  ),
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     gradient: LinearGradient(
                       begin: Alignment.bottomLeft,
                       end: Alignment(0.8, 0.0),
@@ -276,6 +229,15 @@ class _HomeScreenState extends State<HomeScreen> {
                         Color(0xFF0C849F)
                       ],
                       //tileMode: TileMode.repeated,
+                    ),
+                  ),
+                  child: const Text(
+                    "Add Task",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w400,
+                      fontSize: 15,
                     ),
                   ),
                 ),

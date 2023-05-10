@@ -3,7 +3,7 @@ import 'package:intl/intl.dart';
 
 import '../../model/todo_model.dart';
 import '../../res/common/app_container.dart';
-import '../../res/common/common_text_feild.dart';
+import '../../res/common/common_text_field.dart';
 import '../../res/constant/app_images.dart';
 
 class TodoScreen extends StatefulWidget {
@@ -217,7 +217,7 @@ class _TodoScreenState extends State<TodoScreen> {
                       padding: const EdgeInsets.symmetric(horizontal: 15),
                       alignment: Alignment.center,
                       decoration: BoxDecoration(
-                        color: Color(0xFF095769),
+                        color: const Color(0xFF095769),
                         borderRadius: BorderRadius.circular(25),
                       ),
                       child: const Text(

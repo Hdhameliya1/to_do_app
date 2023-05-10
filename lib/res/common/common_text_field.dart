@@ -28,7 +28,7 @@ class TextFieldContainer extends StatelessWidget {
       minLines: minLines,
       textInputAction: textInputAction ?? TextInputAction.next,
       decoration: InputDecoration(
-        enabledBorder: OutlineInputBorder(
+        enabledBorder: const OutlineInputBorder(
           borderSide: BorderSide(
             color: Color(0xFF1AB8DB),
           ),
@@ -37,7 +37,7 @@ class TextFieldContainer extends StatelessWidget {
           ),
         ),
         suffixIcon: suffixIcon,
-        focusedBorder: OutlineInputBorder(
+        focusedBorder: const OutlineInputBorder(
           borderSide: BorderSide(
             color: Color(0xFF095769),
           ),

@@ -15,14 +15,14 @@ class AppContainer extends StatelessWidget {
       decoration: BoxDecoration(
         color: Colors.white,
         border: Border.all(
-          color: Color(0xFF1AB8DB),
+          color: const Color(0xFF1AB8DB),
         ),
         borderRadius: BorderRadius.circular(14),
       ),
       child: Text(
         hintText ?? "",
         style: TextStyle(
-          color: isData! ? Colors.black : Color(0xCC000000),
+          color: isData! ? Colors.black : const Color(0xCC000000),
           fontSize: 16,
           fontWeight: FontWeight.w400,
         ),
